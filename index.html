@@ -18,17 +18,17 @@
                     <h1 class=" pt-5  text-3xl" style="font-family: costome-font;">Todo-App</h1>
                     <div class="relative w-full h-auto  mt-2 flex max-sm:flex-col items-center justify-center gap-5 sm:my-5">
                         <input id="input-todo" class="w-full border-1 rounded-md max-sm:mt-5 w-129 h-11 pl-5 border-[#89AC46]" type="text" title="Enter your task" placeholder="Enter your task">
-                        <button onclick="addTask()" class="max-sm:w-75  max-sm:h-auto sm:absolute right-0 max-sm:py-2  max-sm:mb-5 bg-[#89AC46] w-17 h-11 max-sm:rounded-full sm:rounded-r-md ">ADD</button>
+                        <button id="add-btn" class="max-sm:w-75  max-sm:h-auto sm:absolute right-0 max-sm:py-2  max-sm:mb-5 bg-[#89AC46] w-17 h-11 max-sm:rounded-full sm:rounded-r-md ">ADD</button>
                     </div>
                 </div>
 
                 <div class="w-full h-auto  flex justify-center items-center">
                     <div class="w-full h-auto px-5 sm:px-15 ">
                         <ul id="list-container">
-                            <!-- <div id="create-task" class="flex justify-between items-center py-1.5 mt-8 px-3 border-1 rounded-full border-green-700">
+                            <div id="create-task" class="flex justify-between items-center py-1.5 mt-8 px-3 border-1 rounded-full border-green-700">
                                 <li class="flex  gap-2 items-center"><div class="w-5 h-5 rounded-full  border-1 "></div> kitchen</li>
-                                <div class="flex items-center justify-center"><ion-icon class="text-red-700 text-lg" name="trash-outline"></ion-icon></div>
-                            </div> -->
+                                <div class="flex items-center justify-center gap-2"><ion-icon class="text-lg text-green-950" name="create-outline"></ion-icon>      <ion-icon class="text-red-700 text-lg" name="trash-outline"></ion-icon></div>
+                            </div>
                         </ul>
                     </div>
                 </div>

@@ -1,17 +1,17 @@
 
-let TodoInput = document.getElementById("input-todo");
+let TodoInput = document.getElementById('input-todo')
 
+let AddBtn = document.getElementById('add-btn')
 
-let ListContainer = document.getElementById("list-container");
+let ListContainer = document.getElementById('list-container')
 
 function addTask(){
-    if (TodoInput.value === ''){
-        alert("You Must write something!!!")
-    }
-    else{
-        let div = document.createElement("div");
-        div.innerHTML = TodoInput.value;
-        ListContainer.appendChild(div);
-        
-    }
+    let TodoLi = document.createElement('li')
+    TodoLi.textContent = TodoInput.value
+    ListContainer.appendChild(TodoLi)
+    TodoInput.value = ""
+
+    
 }
+
+AddBtn.addEventListener('click',addTask)
