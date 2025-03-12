@@ -11,24 +11,21 @@
 <body>
     
 
-    <div class="w-full h-auto min-h-screen bg-[#89AC46]">
-        <div class="w-full h-auto min-h-screen flex justify-center pt-30 max-sm:px-5">
-            <div class="w-full sm:w-150 h-auto min-h-130  bg-[#D3E671] rounded-lg mb-20">
-                <div class="w-full h-auto  bg-[#F8ED8C] rounded-t-lg max-sm:px-4 sm:px-5 sm:py-1">
-                    <h1 class=" pt-5  text-3xl" style="font-family: costome-font;">Todo-App</h1>
-                    <div class="relative w-full h-auto  mt-2 flex max-sm:flex-col items-center justify-center gap-5 sm:my-5">
-                        <input id="input-todo" class="w-full border-1 rounded-md max-sm:mt-5 w-129 h-11 pl-5 border-[#89AC46]" type="text" title="Enter your task" placeholder="Enter your task">
-                        <button id="add-btn" class="max-sm:w-75  max-sm:h-auto sm:absolute right-0 max-sm:py-2  max-sm:mb-5 bg-[#89AC46] w-17 h-11 max-sm:rounded-full sm:rounded-r-md ">ADD</button>
+    <div class="relative w-full h-auto min-h-screen bg-[#101114]">
+        <div class=" w-full h-auto min-h-screen flex justify-center pt-30 max-sm:pt-20 max-sm:px-5">
+            <div class="w-full sm:w-150 h-auto min-h-130   rounded-lg mb-20">
+                <div class="w-full h-auto   rounded-t-lg max-sm:px-4 sm:px-5 sm:py-1">
+                    <h1 class="uppercase pt-5 font-medium text-3xl max-sm:absolute top-0 left-5 text-[#4A90E2]" style="font-family: costome-font; ">Todo-App</h1>
+                    <div class="relative w-full h-auto  sm:mt-2 flex max-sm:flex-col items-center justify-center gap-5 sm:my-5">
+                        <input id="input-todo" class="w-full border-1 rounded-md max-sm:rounded-full max-sm:mt-5 w-129 h-11 pl-5 text-[#F9F9F9] border-gray-600 focus:outline-none" type="text" title="Enter your task" placeholder="Enter your task">
+                        <button id="add-btn" class="max-sm:w-75  max-sm:h-auto sm:absolute right-0 max-sm:py-2  max-sm:mb-5 bg-[#4A90E2] w-17 h-11 max-sm:rounded-full sm:rounded-r-md ">ADD</button>
                     </div>
                 </div>
 
                 <div class="w-full h-auto  flex justify-center items-center">
                     <div class="w-full h-auto px-5 sm:px-15 ">
                         <ul id="list-container">
-                            <div id="create-task" class="flex justify-between items-center py-1.5 mt-8 px-3 border-1 rounded-full border-green-700">
-                                <li class="flex  gap-2 items-center"><div class="w-5 h-5 rounded-full  border-1 "></div> kitchen</li>
-                                <div class="flex items-center justify-center gap-2"><ion-icon class="text-lg text-green-950" name="create-outline"></ion-icon>      <ion-icon class="text-red-700 text-lg" name="trash-outline"></ion-icon></div>
-                            </div>
+                            
                         </ul>
                     </div>
                 </div>
