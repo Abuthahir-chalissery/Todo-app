@@ -4,6 +4,9 @@ const addBtn = document.getElementById('add-btn');
 const listContainer = document.getElementById('list-container');
 
 
+LoadData()
+
+
 // Add Task Function
 function addTask(e) {
     e.preventDefault();
@@ -11,6 +14,7 @@ function addTask(e) {
     const task = todoInput.value.trim(); 
 
     if (task === "") return;
+
 
     // Creating task elements
     const todoDiv = document.createElement('div');
@@ -23,7 +27,7 @@ function addTask(e) {
 
     // Adding content
     todoLi.textContent = task;
-    editBtn.innerHTML = `<ion-icon class="text-lg text-[#4A4D57]" name="create-outline"></ion-icon>`;
+    // editBtn.innerHTML = `<ion-icon class="text-lg text-[#4A4D57]" name="create-outline"></ion-icon>`;
     trashBtn.textContent = `<ion-icon class="text-[#4A4D57] text-lg" name="trash-outline"></ion-icon>`;
 
 
@@ -48,22 +52,54 @@ function addTask(e) {
     checkBox.classList.add("w-5", "h-5", "rounded-full",  "border-1",  "text-[#4A90E2]")
     delDiv.classList.add("flex", "items-center", "justify-center", "gap-2");
     trashBtn.classList.add("text-red-500", "hover:text-red-700", "transition");
-
-
+    
     // Adding the icons
     trashBtn.innerHTML = trashBtn.innerHTML = `<ion-icon class="text-[#4A4D57] text-lg" name="trash-outline"></ion-icon>`;
 
+    saveData()
 
-    // Delete Task Functionality
+
+    // Functionalities
+    // Delete
     function TrashTask(){
         listContainer.removeChild(todoDiv)
-    }
-    // delete
-    trashBtn.addEventListener('click',TrashTask);
-    
 
+    }
+    trashBtn.addEventListener('click',TrashTask);
+
+
+    function ToggleTask(){
+        if (checkBox.classList.contains('bg-[#4A90E2]')){
+            checkBox.classList.remove('bg-[#4A90E2]')
+            checkBox.classList.add('bg-transparent')
+            todoLi.style.textDecoration = 'none'
+            todoLi.style.color = 'white'
+        }else{
+            checkBox.classList.add('bg-[#4A90E2]')
+            checkBox.classList.remove('bg-transparent')
+            todoLi.style.textDecoration = 'line-through'
+            todoLi.style.color = 'gray'
+            
+        }
+        saveData()
+
+        
+    }
+
+    
+    checkBox.addEventListener('click',ToggleTask)
 
 }
+
+
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML)
+}
+
+function LoadData(){
+    listContainer.innerHTML = localStorage.getItem("data")
+}
+
 
 
 
